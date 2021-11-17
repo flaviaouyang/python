@@ -77,6 +77,22 @@ while True:
 print ("Thank you")
 ```
 
+- continue statements
+
+```python
+# continue statements are used inside loops
+# when reaches a continue statement, the program execution jumps back to the start of the loop and reevaluates the loop's condition
+
+while True:
+  code = input("What is the code word?")
+  if code != "cactus"
+  	continue
+  else:
+    print("Welcome")
+  	break
+print("You're in.")
+```
+
 
 
 

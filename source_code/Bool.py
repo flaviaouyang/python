@@ -17,11 +17,20 @@
 #     print ("You are wonderful")
 #     counter += 1
 
-age = 20
-while age >= 18:
-    is_verified = input("Verification: ")
-    if is_verified == "verified":
-        print ("Have fun!")
-        break
-    else:
-        break
+# age = 20
+# while age >= 18:
+#     is_verified = input("Verification: ")
+#     if is_verified == "verified":
+#         print ("Have fun!")
+#         break
+#     else:
+#         break
+
+while True:
+  code = input("What is the code word?\n")
+  if code != "cactus":
+  	continue
+  else:
+    print("Welcome")
+    break
+print("You're in.")
