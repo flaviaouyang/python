@@ -171,5 +171,83 @@ def division(denominator):
 
 ## Chapter four: Lists
 
-- The List Data Type:
-  - 
+- The *List*  Data Type:
+  - *List* is a value that contains multiple values in an ordered sequence
+  - `list=['a', 'list', 'looks', 'like', 'this']`
+  - Values inside the list is called **items**, and items are separated with **commas**.
+- Getting individual values in a list with Indexes
+  - ![Screen Shot 2021-11-17 at 12.11.41 AM](/Users/flaviaouyang/Library/Application Support/typora-user-images/Screen Shot 2021-11-17 at 12.11.41 AM.png)
+  - Python will give an `IndexError`message if an index exceeding the number of values in your list values is given
+  - Index can only be integer values, not floats. Otherwise, a `TypeError`will be thrown.
+  - Lists can also contain other list values.
+  - Negative Indexes: `-1`refers to the last index in a list, so on and so forth
+- Getting Sublists with Slice
+  - `list[1:10]`
+- Getting a list's length with `len()`
+- List Concatenation and List Replication
+  - `+`operator can combine two lists to create a new list value
+  - `*`operator can replicate the list `x`amount of time
+- Romving vlues from lists with `del`statements
+  - `del`statement will delete values at an index in a list
+  - all the values in the list after the deleted value will be moved up one index
+  - `del list[index]`
+  - `del list` will delete the entire variable 
+    - if you try to use the variable after, you will get a `NameError`error
+- Working with Lists
+  - to avoid using multiple and repetitive variables, you can use a single variable that contains a list value
+- `in` and `not in`operators
+  - `'cat' in list` or `'boy' not in list`
+- Multiple Assignment Trick:
+  - `cat=['black','old]`
+  - `color = cat[0]`and `age = cat[1]`
+  - or you can write `color, age = cat`
+  - if the number of variables and the length of the list is not **exactly the same**, a `ValueError`will be thrown.
+- Methods: a *method*  is the same thing as a function, except it is "called on" a value.
+  - finding a value in alist with the `index()`method
+    - `list.index('item')` >>> `2`
+    - if the value isn't in the list, a `ValueError`is thrown
+    - when there are duplicates in the list, the first appearance is returned
+  - adding values to lists with `append()`and `insert()`methods
+    - `append('value')`adds to the end of the list
+    - `insert(index, 'value')` insert a value at any index
+    - both methods can only be used on list values
+  - removing values from lists with `remove()`
+    - `list/remove('value')`
+    - if there are duplicates, <u>only the first instance</u> of the value will removed
+  - sorting the values in list with the `sort()`method
+    - `list.sort()` will sort numbers in ascending order and string values in ASCIIbetical order (uppercase before lowercase)
+    - `list.sort(reverse=True)`
+    - you cannot sort lists with multiple data types
+    - `list.sort(key=str.lower)`will sort in a regular alphabetical order
+- List-like types: Strings and Tuples
+- Mutable and Immutable Data Type:
+  - Mutable (it can be modified): list
+  - Immutable (it cannot be reassigned/rearranged): string
+- Tuple: almost identical to list, except that
+  - tuples are enclosed with parentheses `()`
+  - tuples are immutable
+    - no modifying values
+    - no appending
+    - No removing
+  - if there is only one value in a tuple, you must add a trailing comma to indicate that it is a tuple not a string
+  - Typecasting: `tuple(list)`
+- References
+  - When you assign a list to a variable, you are assigning a list *reference* to the variable. 
+  - A reference is a value that points to some bit of data and list reference is a value that points to a list
+  - Therefore, if you change the list through one reference, the lists changes
+
+```python
+dog = ['doberman', 'golden', 'corgi']
+dog_1 = dog
+dog_1[1] = 20
+print (dog)
+print (dog_1)
+
+# ['doberman', 20, 'corgi']
+# ['doberman', 20, 'corgi']
+```
+
+- The copy Module's `copy()`and `deepcopy()`functions
+  - first `import copy`
+  - `copy.copy(list)`can be used to make a duplicate copy of a mutable value (list or dictionary) not just a copy of reference
+  - if the list needs to be copied contains lists, then use `copy.deepcopy()`
