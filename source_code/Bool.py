@@ -26,11 +26,18 @@
 #     else:
 #         break
 
-while True:
-  code = input("What is the code word?\n")
-  if code != "cactus":
-  	continue
-  else:
-    print("Welcome")
-    break
-print("You're in.")
+# while True:
+#   code = input("What is the code word?\n")
+#   if code != "cactus":
+#   	continue
+#   else:
+#     print("Welcome")
+#     break
+# print("You're in.")
+
+# for i in range (10):
+#     print("Counting: " + str(i))
+
+grocery = ["banana", "brie", "basil", "pepper", "olive oil"]
+for item in grocery:
+    print("We are buying " + item)
