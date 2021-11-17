@@ -57,11 +57,30 @@ dog = ['doberman', 'golden', 'corgi']
 # dog_tuple = tuple(dog)
 # print(dog_tuple)
 
-dog_1 = dog
-dog_2 = copy.copy(dog)
+# dog_1 = dog
+# dog_2 = copy.copy(dog)
 
-dog_1[1] = 20
+# dog_1[1] = 20
 
-print (dog)
-print (dog_1)
-print(dog_2)
+# print (dog)
+# print (dog_1)
+# print(dog_2)
+
+# Write a function that takes a list value as an argument and returns
+# a string with all the items separated by a comma and a space, with and
+# inserted before the last item. For example, passing the previous spam list to
+# the function would return 'apples, bananas, tofu, and cats'. But your function
+# should be able to work with any list value passed to it.
+
+spam = ['apples', 'bananas', 'tofu', 'cats']
+def comma_code(list):
+    string_list = ""
+    for word in list:
+        string_list += word
+        if list.index(word) != len(list) - 1:
+            string_list += ", "
+    return string_list
+
+print(comma_code(spam), end="\n")
+print(comma_code(dog), end="\n")
+
