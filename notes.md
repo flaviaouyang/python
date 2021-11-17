@@ -108,7 +108,23 @@ for i in range (5, -1, -1):
 # 5 4 3 2 1 0
 ```
 
+- importing modules: `import`statement composed of `import`, the name of the module, comma, and more modules names (optional)
 
+- Ending a Program Early: `sys.exit()`
+
+  - terminate a program by calling `sys.exit()` 
+  - since this function is in `sys`module, you have to import `sys`before your program can use it
+
+  ```python
+  import sys
+  while True:
+    response = input("Enter \'exit\' to exit.")
+    if response == "exit":
+      sys.exit()
+     print("Your response is " + response)
+  ```
+
+  
 
 
 
