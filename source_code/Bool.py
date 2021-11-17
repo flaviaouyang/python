@@ -38,6 +38,16 @@
 # for i in range (10):
 #     print("Counting: " + str(i))
 
-grocery = ["banana", "brie", "basil", "pepper", "olive oil"]
-for item in grocery:
-    print("We are buying " + item)
+# grocery = ["banana", "brie", "basil", "pepper", "olive oil"]
+# for item in grocery:
+#     print("We are buying " + item)
+
+for i in range(12, 16):
+  print(i)
+# 12 13 14 15
+for i in range(0, 10, 2):
+  print(i)
+# 0 2 4 6 8
+for i in range (5, -1, -1):
+  print(i)
+# 5 4 3 2 1 0
