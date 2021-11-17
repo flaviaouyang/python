@@ -169,5 +169,7 @@ def division(denominator):
       print ("Error: Invalid argument.")
 ```
 
+## Chapter four: Lists
 
-
+- The List Data Type:
+  - 
