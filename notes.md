@@ -124,7 +124,50 @@ for i in range (5, -1, -1):
      print("Your response is " + response)
   ```
 
-  ## Chapter Three: Functions
 
-  
+## Chapter Three: Functions
+
+- A *function* is like a min-program within a program
+
+```python
+def hello():
+  print("Howdy!")
+  print("Hallo!")
+  print("Salut!")
+```
+
+- The first line is a `def`statement which defines a function's name
+
+- code block that follows `:` is the body of the function
+- The code is executed when the function is called, not defined
+- The `none`value:
+  - represents the absence of a value
+  - `None` is the only value of the `NoneType`data type
+- `print()`function
+
+```python
+print("Hello". end="")
+print("World")
+# HelloWorld
+print("cats", "dogs", "mice", sep="-")
+```
+
+- Local and Global Scope
+  - Parameters and variables that are assigned in a called function are within that function's *local scope*.
+  - Variables that are assigned outside all functions are within in the *global scope*.
+- Exception Handling
+  - an error or *exception* means that the entire program will crash
+  - Errors and can be handled with <strong>try and except</strong> statements
+    - code that can potentially have an error is put in a **try** clause
+    - Program moves to the start of a **except** clause if an error happens
+
+```python
+def division(denominator):
+  try:
+    return 100/denominator
+  except ZeroDivisionError:
+      print ("Error: Invalid argument.")
+```
+
+
 
