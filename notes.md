@@ -5,7 +5,7 @@
 
 ## Chapter One: Python Basics
 
-- Math Operator
+- Math Operator
 
   ```python
   ** #exponent
