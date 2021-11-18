@@ -336,7 +336,37 @@ print("The cat is ", cat.get('breed', 'undetermined in terms of breed'), ".")
 
 ---
 
-## Chapter Six
+## Chapter Six: Manipulating Strings
+
+- String Literals
+
+	- double quotes `foo = "this is a string"`
+
+	- escape characters `foo = 'say hi to Nat\'s mother'`
+
+		1. `\s` single quote
+		2. `\"` double quote
+		3. `\t` tab
+		4. `\n` new line
+		5. `\\` backslash
+
+	- raw strings: place `r` before the beginning of quotation mark and make it a raw string
+
+		- **a raw string** ignores all escape characters
+
+	- multiline strings with triple quotes
+
+		```python
+		print('''Dear Austyn,
+		
+		I love you more and more each day.
+		
+		Sincerely,
+		Flavia
+		''')
+		```
+
+		
 
 
 
