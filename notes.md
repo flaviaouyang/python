@@ -3,6 +3,8 @@
 - Run python in terminal `python filename.py`
 - Run python in VSC `shift + 1`
 
+***
+
 ## Chapter One: Python Basics
 
 - Math Operator
@@ -16,6 +18,8 @@
 - Variable naming convention: `snake_case`
 
 - Typecasting: `str(100)`,`int("100")`,`float(100)`
+
+---
 
 ## Chapter Two: Flow Control
 
@@ -124,6 +128,7 @@ for i in range (5, -1, -1):
      print("Your response is " + response)
   ```
 
+---
 
 ## Chapter Three: Functions
 
@@ -168,6 +173,8 @@ def division(denominator):
   except ZeroDivisionError:
       print ("Error: Invalid argument.")
 ```
+
+---
 
 ## Chapter four: Lists
 
@@ -251,3 +258,21 @@ print (dog_1)
   - first `import copy`
   - `copy.copy(list)`can be used to make a duplicate copy of a mutable value (list or dictionary) not just a copy of reference
   - if the list needs to be copied contains lists, then use `copy.deepcopy()`
+
+---
+
+## Chapter Five: Dictionaries And Structuring Data
+
+- **Dictionary** data type: a collection of many values
+	- unlike lists, indexes can be anything not only integers
+	- index for dictionary is called **key**
+	- A key with its associated value is **key-value pair**
+
+```python
+myCat = {'size':'big', 
+         'color': 'gray',
+         'disposition':'loud'}
+```
+
+
+
