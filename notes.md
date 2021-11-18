@@ -267,6 +267,7 @@ print (dog_1)
 	- unlike lists, indexes can be anything not only integers
 	- index for dictionary is called **key**
 	- A key with its associated value is **key-value pair**
+	- Code below assigns a dictionary to `myCat`variable, the `keys` are `size, color,disposition` and `values`are `'big','gray','loud'`
 
 ```python
 myCat = {'size':'big', 
@@ -274,5 +275,61 @@ myCat = {'size':'big',
          'disposition':'loud'}
 ```
 
+- Dictionaries vs. Lists
 
+	- items in dictionaries are unordered
+	- dictionaries cannot be sliced like lists
+	- access a key that does not exist will result in a `KeyError` message
+
+- `keys(), values(), and items()`Methods
+
+	- `dic_name.key()`
+	- they are not lists
+	- `dic.item()` returns tuples of key and value
+	- use `list()` to transform output to list
+
+- Checking if a `key/value`exist in a Dictionary
+
+	- use `in` or `not in` operator
+
+	```python
+	print('big' in cat)
+	# output:
+	# False
+	
+	print('size' in cat)
+	# output:
+	# True
+	
+	print('big' in cat.values())
+	# output:
+	# True
+	```
+
+- `get()`: takes two arguments
+
+	1. key of the value to retrieve
+	2. a fallback value to return if that key does not exist
+
+```python
+print("The cat is ", cat.get('size', 'undetermined in terms of size'), ".")
+# output:
+# The cat is  big .
+
+print("The cat is ", cat.get('breed', 'undetermined in terms of breed'), ".")
+# output:
+# The cat is  undetermined in terms of breed .
+```
+
+- `setdefault()`method:
+	- set a value for a certain key if that key does not already have a value
+	- first argument passed: the key to check for
+	- second argument passed: the value set at that key if key DNE
+	- if key does exist, the method returns the key's value
+- Pretty Printing
+	- `import pprint`
+	- `pprint.pprint()`
+	- `pprint.pformat()` gives the prettified text as a string value
+- Using Data Structures to Model Real-World Things 
+	- Tic-Tac-Toe Board:
 
