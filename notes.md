@@ -366,7 +366,84 @@ print("The cat is ", cat.get('breed', 'undetermined in terms of breed'), ".")
 		''')
 		```
 
-		
+	- multiline comments
+
+	```python
+	"""this is a multiline comment
+	in python
+	interesting, right?"""
+	```
+
+	- Indexing and Slicing Strings
+
+		- ![Screen Shot 2021-11-18 at 6.45.55 AM](/Users/flaviaouyang/Library/Application Support/typora-user-images/Screen Shot 2021-11-18 at 6.45.55 AM.png)
+
+		- ```python
+			spam = 'Hello world!'
+			spam[0] = 'H'
+			```
+
+	- `in` and `not in` Operators with Strings
+
+		- ```python
+			>>> 'hello' in 'hello world'
+			True
+			```
+
+- Useful String Methods
+
+	- `upper(), lower(), isupper(), islower()` string methods
+	- they do not change the string itself, just return new values
+
+- `isX()`String methods
+
+	1. `isalpha()`: True if only letters and not blank
+	2. `isalnum()`: True is only letters and numbers and not blank
+	3. `isdecimal()`: True is only numeric characters and not blank
+
+- `startswith()` and `endswith()`string methods
+
+	- return `True` if begin or ends with string passed
+
+- `join()` and `split()`
+
+	```python
+	a = 'apple'
+	b = 'banana'
+	c = 'cucumber'
+	d = 'deck'
+	
+	print(', '.join([a, b, c, d]))
+	
+	quote = 'Someone will remember us, I say, Even in another time'
+	
+	print(quote.split(', '))
+	```
+
+- Justifying Text with `rjust()`, `ljust()` and `center()`
+
+	- `rjust() and ljust()`return a padded version of the string
+
+		- first argument is an integer length for the justified string
+
+		- ```python
+			print(a.rjust(30))
+			print(a.ljust(10))
+			```
+
+		- `center()` works the same
+
+- removing whitespace with `strip(), rstrip() and lstrip()`
+
+- Copy and Paste with `pyperclip` Module
+
+```python
+import pyperclip
+pyperclip.copy("foo")
+pyperclip.paste
+```
+
+
 
 
 
