@@ -331,5 +331,7 @@ print("The cat is ", cat.get('breed', 'undetermined in terms of breed'), ".")
 	- `pprint.pprint()`
 	- `pprint.pformat()` gives the prettified text as a string value
 - Using Data Structures to Model Real-World Things 
-	- Tic-Tac-Toe Board:
+	- Tic-Tac-Toe Board
+- Nested Dictionaries and Lists
+- 
 
