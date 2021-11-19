@@ -443,7 +443,45 @@ pyperclip.copy("foo")
 pyperclip.paste
 ```
 
+---
 
+## Chapter Seven: Pattern Matching with Regular Expressions
+
+- **Regular expressions**, called *regexes* for short, are descriptions for a pattern of text.
+
+	- `\d` in a regex stands for a digit character (0-9)
+	- adding a number in curly bracket `{num}` after a pattern will repeat that pattern `num` times
+
+- Creating Regex Objects
+
+	- All regex functions in Python are in the `re` module 
+	- `import re`
+	- Passing a string value representing your regular expression to `re.compile()`returns a *Regex* pattern object
+
+	```python
+	phoneNumRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
+	# phoneNumRegex variable contains a Regex object
+	# r in front of '' because passing raw string is easier
+	```
+
+- Matching Regex Objects
+
+	- A Regex object's `search()`method searches the string it is passed for any matches to the regex
+	- `search()`return `None`if the regex pattern is not found in the string
+	- if a pattern is found, the `search()` method returns a `Match`object
+	- `Match`objects have a `group()`method that will return the actual matched text from the searched string
+
+	```python
+	phoneRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
+	num = phoneRegex.search(message)
+	print(num.group())
+	```
+
+	- Review of Regular Expression Matching
+		1. import regex module `import re`
+		2. Create a regex object with `re.compile()` function, use a raw string
+		3. pass the string you want to search into the regex object's `search()` method. this will return a Match object
+		4. Call the Match object's `group()`method to return a string of the actual matched text
 
 
 
