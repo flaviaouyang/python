@@ -483,5 +483,102 @@ pyperclip.paste
 		3. pass the string you want to search into the regex object's `search()` method. this will return a Match object
 		4. Call the Match object's `group()`method to return a string of the actual matched text
 
+- Grouping with Parentheses: 
+
+	- adding parentheses will create *groups* in the regex: `(\d\d\d)-(\d\d\d\d)`
+
+	- then use `group()`match object method to grab the matching text from just one group
+
+		- First set of parentheses in a regex string will be group 1, adn so on
+		- Pass integer to `group()`match object method, you can grab different parts of the matched text
+		- pass nothing or 0 will return the entire matched text
+
+		```python
+		>>> phoneNumRegex = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
+		>>> mo = phoneNumRegex.search('My number is 415-555-4242.')
+		>>> mo.group(1)
+		'415'
+		>>> mo.group(2)
+		'555-4242'
+		>>> mo.group(0)
+		'415-555-4242'
+		>>> mo.group()
+		'415-555-4242'
+		```
+
+		- to retrieve all groups at one, use `groups()`method
+
+			- this will return a tuple of values
+
+			```python
+			>>> mo.groups()
+			('415', '555-4242')
+			>>> areaCode, mainNumber = mo.groups()
+			>>> print(areaCode)
+			415
+			>>> print(mainNumber)
+			555-4242
+			```
+
+		- how to handle parentheses in text: escape the parentheses `\(\)`
+
+- Matching Multiple Groups with the Pipe
+
+	- `|`is called a *pipe*: use it anywhere you want to match one of many expressions
+
+		- `r'Batman|Tina Fey'` will match either 'Batman' or 'Tina Fey'
+		- When both searched terms occur in the searched string, the first occurence of matching text will be returned as the Match object
+
+	- use pipe to match one of several patterns as part of regex
+
+		- You want to match any of 'batman', 'batmobile', 'batcave'
+
+		```python
+		batRegex = re.compile(r'bat(man|mobile|cave)')
+		mo = batRegex.search("batman is cool")
+		mo.group()
+		# batman
+		mo.group(1)
+		# man
+		```
+
+- Optional Matching with the Question Mark
+
+	- The `?`character flags the group that precedes it as an optional part of the pattern
+
+	```python
+	batRegex = re.compile(r'bat(wo)?man')
+	mo = batRegex.search("batman is the best")
+	print(mo.group())
+	
+	mo1 = batRegex.search("batwoman is the best")
+	print(mo1.group())
+	
+	mo2 = batRegex.search("batwoman is better than batman ")
+	print(mo2.group())
+	
+	mo3 = batRegex.search("batman is better than batwoman")
+	print(mo3.group())
+	
+	# Print Output:
+	# batman
+	# batwoman
+	# batwoman
+	# batman
+	```
+
+	
+
+- You can find *all* matching occurrences with `findall()` method
+
+```python
+murphyRegex = re.compile(r'Endon|Murphy')
+mur = murphyRegex.search(quote)
+print(mur.group())
+print(murphyRegex.findall(quote))
+```
+
+
+
 
 
