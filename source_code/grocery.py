@@ -1,5 +1,6 @@
 grocery = {}
 
+
 def display_grocery(grocery):
     print("Grocery List: ")
     for k, v in grocery.items():
@@ -7,7 +8,7 @@ def display_grocery(grocery):
     total = 0
     for v in grocery.values():
         total += v
-    print( "Total items:", total)
+    print("Total items:", total)
 
 
 def add_to_grocery(grocery, added_item):
@@ -17,7 +18,6 @@ def add_to_grocery(grocery, added_item):
     display_grocery(grocery)
 
 
-# today = ['apple', 'banana', 'brie', 'chips', 'beer', 'apple', 'apple', 'brie']
 to_buy = []
 num = int(input('How many items would you like to add to grocery list: '))
 for i in range(num):
