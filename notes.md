@@ -322,7 +322,7 @@ print("The cat is ", cat.get('breed', 'undetermined in terms of breed'), ".")
 ```
 
 - `setdefault()`method:
-	- set a value for a certain key if that key does not already have a value
+	- set a value for a certain key if that key does not already exist
 	- first argument passed: the key to check for
 	- second argument passed: the value set at that key if key DNE
 	- if key does exist, the method returns the key's value
