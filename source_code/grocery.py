@@ -19,9 +19,13 @@ def add_to_grocery(grocery, added_item):
 
 
 to_buy = []
-num = int(input('How many items would you like to add to grocery list: '))
+num = int(input('\n\nHow many items would you like to add to grocery list: '))
 for i in range(num):
     item = input("To buy: ")
     to_buy.append(item)
 
+print()
+print()
 add_to_grocery(grocery, to_buy)
+print()
+print()
