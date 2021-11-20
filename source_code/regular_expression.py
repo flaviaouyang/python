@@ -33,23 +33,23 @@ import re
 # print(no)
 # print(num.group())
 
-# quote = '''
-# the last at last seen of him
-# himself unseen by him
-# and of himself"
+quote = '''
+the last at last seen of him
+himself unseen by him
+and of himself"
 
-# A rest.
+A rest.
 
-# The last Mr. Murphy saw of Mr. Endon was Mr. Murphy unseen by Mr. Endon. This was also the last Murphy saw of Murphy."
+The last Mr. Murphy saw of Mr. Endon was Mr. Murphy unseen by Mr. Endon. This was also the last Murphy saw of Murphy."
 
-# A rest. 2020-11-20
+A rest. 2020-11-20
 
-# The relation between Mr. Murphy and Mr. Endon could not have better summed up than by the former's sorrow at seeing himself in the latter's immunity from seeing anything but himself."
+The relation between Mr. Murphy and Mr. Endon could not have better summed up than by the former's sorrow at seeing himself in the latter's immunity from seeing anything but himself."
 
-# A long rest.
+A long rest.
 
-# Mr. Murphy is a speck in Mr. Endon's unseen.
-# '''
+Mr. Murphy is a speck in Mr. Endon's unseen.
+'''
 
 # restRegex = re.compile(r'\d\d\d\d-\d\d-\d\d')
 # mo = restRegex.search(quote)
@@ -76,21 +76,31 @@ import re
 # print(mo.group(0))
 # print(mo.group(1))
 
-batRegex = re.compile(r'bat(wo)?man')
-mo = batRegex.search("batman is the best")
-print(mo.group())
+# batRegex = re.compile(r'bat(wo)?man')
+# mo = batRegex.search("batman is the best")
+# print(mo.group())
 
-mo1 = batRegex.search("batwoman is the best")
-print(mo1.group())
+# mo1 = batRegex.search("batwoman is the best")
+# print(mo1.group())
 
-mo2 = batRegex.search("batwoman is better than batman ")
-print(mo2.group())
+# mo2 = batRegex.search("batwoman is better than batman ")
+# print(mo2.group())
 
-mo3 = batRegex.search("batman is better than batwoman")
-print(mo3.group())
+# mo3 = batRegex.search("batman is better than batwoman")
+# print(mo3.group())
 
 # Print Output:
 # batman
 # batwoman
 # batwoman
 # batman
+
+# batRegex = re.compile(r'bat(wo)*man')
+# batRegex = re.compile(r'bat(wo)+man')
+# mo = batRegex.search('batman is cook')
+# # mo = batRegex.search('batwowowowowowowowoman is cook')
+# print(mo.group())
+
+vowelRegex = re.compile(r'[aeiouAEIOU]')
+mo = vowelRegex.search(quote)
+print(mo.group())

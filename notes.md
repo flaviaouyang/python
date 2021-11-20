@@ -578,6 +578,186 @@ print(mur.group())
 print(murphyRegex.findall(quote))
 ```
 
+- Matching ZERO or More with the Star
+
+	- `*` means match zero or more: the group preceding `*` can occur any number of times. It can be absent or repeated 10,000 times.
+
+	- ```python
+		batRegex = re.compile(r'bat(wo)*man')
+		# mo = batRegex.search('batman is cook')
+		mo = batRegex.search('batwowowowowowoman is cook')
+		print(mo.group())
+		```
+
+- Matching One or More with Plus sign
+
+	- `+` means match one or more: the preceding group must appear at least one time
+
+	- ```python
+		batRegex = re.compile(r'bat(wo)+man')
+		mo = batRegex.search('batman is cook')
+		# mo = batRegex.search('batwowowowowowowowoman is cook')
+		print(mo.group())
+		
+		#output:
+		Traceback (most recent call last):
+		  line 102, in <module>
+		AttributeError: 'NoneType' object has no attribute 'group'
+		```
+
+- Match Specific Repetitions with Curly Brackets
+
+	- a number in curly brackets will repeat the preceding group a specific number of times
+	- `(Ha){3}` will match `'HaHaHa'`
+	- You can also specify a range by writing a minimum, a comma, and a maximum in between the curly brackets like `(Ha){3, 5}`
+	- You can also leave out a number to make it unbounded like `(ha){3,}`will match 3 or more and`(ha){,5}`will match 0 to 5 instances
+
+- Greedy and Nongreddy Matching
+
+	- Python's regex are *greedy* by default: in ambiguous situation it will match the longest string possible
+	- *non-greedy* version will match the shortest string possible
+
+- `findall()` Method
+
+	- return the strings of every match in the searched string
+	- Unlike `search()`, `findall()` doesnt return a *Match* object but a list of strings, **as long as there is no group**
+	- If there *are* groups, `findall()` will return a list of tuples
+
+- **Character Classes**
+
+	- shorthand codes for common character classes
+
+	```python
+	\d # numeric digit from 0 to 9
+	\D # character that is not a number digit from 0 to 9
+	\w # any letter, numeric digit or underscore
+	\W # any character that is not a letter, numeric digit or the underscore
+	\s # any space, tab or newline character
+	\S # any that is not a space, tab or newline
+	```
+
+- Making your own character class
+
+	- define your own character class with `[]`
+	- for example `[aeiouAEIOU]` will match any vowel, lowercase and uppercase
+	- You can also include ranges of letters or numbers using hyphen `[a-zA-Z0-9]`
+	- Inside `[]`, you don't need to escape `\`
+	- `^` will create a negative class
+		- it will match all character that is **not** in the class
+		- `[^aeiouAEIOU]`
+
+- Caret and Dollar SIgn Characters
+	- `^` at the start of a regex to show that a match must be at the *beginning* of the searched text
+	- `$` at the end of the regex to show the string must end with this regex pattern
+	- combine `^` and `$` together, you can show you need the entire string to match the exact regex pattern
+	- **Carrots costs dollars** to remember caret comes first
+- Wildcard character
+	- `.` will match any character except for a newline
+	- it will match only one character
+- **Matching everything** with Dot star
+	- Dot-star works in *greedy mode* that it will match as much text as possible
+	- to switch to *non-greedy*, use dot, star, and question mark `.*?`
+- Matching Newlines with Dot
+	- pass `re.DOTALL`as a second argument to `re.compile()` will match *all* characters including newline
+
+![Screen Shot 2021-11-20 at 4.16.25 PM](/Users/flaviaouyang/Library/Application Support/typora-user-images/Screen Shot 2021-11-20 at 4.16.25 PM.png)
+
+- **Case-insensitive** matching
+	- regex are usually case-sensitive
+		- Pass `re.IGNORECASE` or `re.I` as a second argument to `re.compile` will make it case insensitive
+- Substitute Strings with `sub()` Method
+	- `sub()` gets passed two arguments
+		1. a string to replace any matches
+		2. the string for the regular expression
+	- the methods returns a string with all the substitution applied
+- Matching Complex Regexes
+	- ignore whitespace and comments with the **verbose mode**
+		- Pass `re.VERBOSE` as a second argument to `re.compile()`
+- Combine `re.IGNORECASE`, `re.DOTALL` and `re.VERBOSE`
+	- `re.compile()` only takes a single value as its second argument
+	- However, you can still use them together with `|` the pipe character or in this context known as *bitwise or* operator
+	- `someRegex = re.compile('/d', re.IGNORECASE | RE.DOTALL)`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
