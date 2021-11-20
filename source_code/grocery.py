@@ -1,21 +1,27 @@
 grocery = {}
 
-def print_grocery(grocery):
+def display_grocery(grocery):
     print("Grocery List: ")
     for k, v in grocery.items():
         print(v, " ", k)
-
-
-def add_to_grocery(grocery, add_item):
-    for item in add_item:
-        grocery.setdefault(item, 0)
-        grocery[item] += 1
-    print_grocery(grocery)
     total = 0
     for v in grocery.values():
         total += v
     print( "Total items:", total)
 
 
-today = ['apple', 'banana', 'brie', 'chips', 'beer', 'apple', 'apple', 'brie']
-add_to_grocery(grocery, today)
+def add_to_grocery(grocery, added_item):
+    for item in added_item:
+        grocery.setdefault(item, 0)
+        grocery[item] += 1
+    display_grocery(grocery)
+
+
+# today = ['apple', 'banana', 'brie', 'chips', 'beer', 'apple', 'apple', 'brie']
+to_buy = []
+num = int(input('How many items would you like to add to grocery list: '))
+for i in range(num):
+    item = input("To buy: ")
+    to_buy.append(item)
+
+add_to_grocery(grocery, to_buy)
