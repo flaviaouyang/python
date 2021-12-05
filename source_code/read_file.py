@@ -1,0 +1,22 @@
+import os
+
+# print(os.path.join('Users', 'flaviaouyang', 'AutomatePython', 'source_code'))
+# print(os.getcwd())
+# os.chdir('/Users/flaviaouyang')
+# print(os.getcwd())
+# os.makedirs('test123')
+# print(os.path.isabs('.'))
+# print(os.path.isabs(os.path.abspath('.')))
+# print(os.path.dirname(os.getcwd()))
+# print(os.path.basename(os.getcwd()))
+# print(os.path.split(os.getcwd()))
+# print(os.path.getsize(os.getcwd()))
+# print(os.listdir(os.getcwd()))
+# print(os.path.isdir('.'))
+
+test_file = open('/Users/flaviaouyang/AutomatePython/notes/Test.txt')
+test_content = test_file.read()
+print(test_content, '\n\n')
+gluck_file = open('/Users/flaviaouyang/AutomatePython/notes/gluck.txt')
+gluck_content = gluck_file.read()
+print(gluck_content)

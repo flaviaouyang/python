@@ -678,6 +678,116 @@ print(murphyRegex.findall(quote))
 	- However, you can still use them together with `|` the pipe character or in this context known as *bitwise or* operator
 	- `someRegex = re.compile('/d', re.IGNORECASE | RE.DOTALL)`
 
+---
+
+## Chapter Eight: Reading and writing files
+
+### Files and file paths
+
+- file has two key properties:
+	- *filename*
+	- *path*: specifies the location of a file on the computer
+
+### Forward slash on OS X
+
+- Backslashes `\` is the separator between folder names on Windows
+- Forward slash `/` is the separator on OS X and Linux
+- For your program to work on all operating systems, the python must be written in a way that will handle both cases
+	- use `os.path.join()`
+	- thia will return a string with a file path using the correct path separators
+
+```python
+import os
+os.path.join('usr', 'bin', 'spam')
+```
+
+![os.path.join](img/os-path-join.png)
+
+### The current working direcotry
+
+- You can get the **current working directory** or *cwd* as a string value with the `os.getcwd()` function and change it with `os.chdir()`
+
+### Absolute vs. Relative Paths
+
+- **absolute path**: always begins with the root folder
+- **relative path**: relative to the program;s current working directory
+- `.` and `..` folders:
+	- `.` is short hand for this directory
+	- `..` is short hand for parent directory
+
+### Create new folders with `os.makedirs()`
+
+- `os.makedirs()` will create a folder in your cwd if you only pass in a folder name, if passed a path, it will create the directory accordingly
+- this function will create any intermediate directories if necessary
+
+### The `os.path` Module
+
+- The `os.path` module contains many helpful functions related to filenames and file paths
+- Link to `os.path` module documentation: [documentation](http://docs.python.org/3/library/os.path.html)
+
+### Handling absolute and relative paths
+
+- `os.path.abspath(path)` will return a string of the absolute path of the argument: convert a relative path into an absolute one
+- `os.path.isabs(path)` will return `True` if the argument is an absolute path and `False` if a relative one
+- `os.path.relpath(path, start)` will return a string of a relative path from the `start` path to `path`. If `start` is not provided, the cwd is used as the start path
+- `os.path.dirname(path)`will return a string of everything that comes before the last slash in the path argument
+- `os.path.basename(path)` will return a string of everything that comes after the last slash in the path argument
+	- **dir name** and **base name**: ![dirname and base name](img/dirname-basename.png)
+- `os.path.split()` will return a tuple with two strings, one being dir name and the other being base name
+
+### Finding file sizes and folder contents
+
+- `os.path.getsize(path)` will return the size in bytes of the file in the `path` argument
+- `os.listdir(path)` will return a list of filename strings for each file in the `path` argument
+
+### Checking Path Validity
+
+- `os.path.exists(path)` will return `True` if the file or folder referred to in the argument exists and will return `False` if it DNE
+- `os.path.isfile(path)` will return `True` if the path argumetn exists and is a file, will return `False` otherwise
+- `os.path.isdir(path)` will return True if the path argument exists and is a folder and will return `False` otherwise
+
+### File Reading/Writing Process
+
+- The following functions will apply to plaintext file
+	- **plaintext files** contain only basic text characters and do not include font, size, or color information
+		- Example: text file with `.txt` and python scripts `.py`
+	- **binary files** are all other file types, such as word processing documents, PDFs, images, spreadsheets, and executable programs
+- three steps to reading or writing files in python
+	1. Call `open()` function to return a `File` object
+	2. Call the `read()` or `write()` method on the `File` object
+	3. Close the file by calling the `close()` method on the  `File` object
+
+### Opening files with the `open()` function
+
+- To open a file with `open()` function, pass a string path indicating the file you want to open
+	- either absolute or relative
+	- return a File object 
+
+```python
+test_file = open('/User/flaviaouyang/test.txt')
+```
+
+- This will open the file in *read mode*
+	- in *read mode*, Python only lets you read data from the file
+	- you cannot write or modify it
+	- read mode is the default mode
+- A FIle object represents a file on the machine
+	- it is another type of value in Python just like lists or dictionaries
+
+### Reading the Contents of Files
+
+- Now with a File object, we can read from it
+- `read()` to read the entire contents of a file as a string value
+	- `read()` returns a string that is the file
+
+```python
+test_file = open('/Users/flaviaouyang/AutomatePython/notes/Test.txt')
+test_content = test_file.read()
+print(test_content)
+```
+
+- `readlines()` will get a **list** of string values from the file, one string for each line of text
+
 
 
 
