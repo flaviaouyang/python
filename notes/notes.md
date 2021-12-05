@@ -855,7 +855,7 @@ shelfFile.close()
 
 ```python
 import pprint
-c
+
 cats_pp = pprint.pformat(cats)
 file_obj = open('my_cats.py', 'w')
 file_obj.write('cats = ', cats_pp, '\n')
