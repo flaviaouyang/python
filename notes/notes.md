@@ -788,6 +788,33 @@ print(test_content)
 
 - `readlines()` will get a **list** of string values from the file, one string for each line of text
 
+### Writing to files
+
+- To write on a file, you need to open it in `write mode` or `append mode`
+	- **Write mode**  will overwrite the existing file and start from scratch
+	- **append mode** will append text to the end of the existing file
+- To open a file in write mode:
+
+```python
+gluck_file = open('/Users/flaviaouyang/AutomatePython/notes/gluck.txt', 'w')
+```
+
+- To open a file in append mode:
+
+```python
+gluck_file = open('/Users/flaviaouyang/AutomatePython/notes/gluck.txt', 'a')
+```
+
+- If the filename argument **does not exist**, both write and append mode **will create a new, blank file**. After reading or writing a file, call `close()` method before opening the file again.
+
+### Saving variables with shelve Module
+
+- You can save variables in your Python programs to binary shelf files using the `shelve` module
+	- then your program can restore data to variables from the hard drive
+- The `shelve` module will let you add Save and Open features to your program
+	- If you ran a program and entered some configuration settings, you could save those settings to a shelf file and have the program load them the next time it is run
+- 
+
 
 
 

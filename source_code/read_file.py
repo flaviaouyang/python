@@ -18,5 +18,16 @@ test_file = open('/Users/flaviaouyang/AutomatePython/notes/Test.txt')
 test_content = test_file.read()
 print(test_content, '\n\n')
 gluck_file = open('/Users/flaviaouyang/AutomatePython/notes/gluck.txt')
-gluck_content = gluck_file.read()
-print(gluck_content)
+gluck_content = gluck_file.readlines()
+# print(gluck_content)
+
+test_file.close()
+gluck_file.close()
+
+test_file = open('/Users/flaviaouyang/AutomatePython/notes/Test.txt', 'w')
+test_file.write("I love my girlfriend so damn much.")
+test_file.close()
+
+gluck_file = open('/Users/flaviaouyang/AutomatePython/notes/gluck.txt', 'a')
+gluck_file.write("Awesome")
+gluck_file.close()
