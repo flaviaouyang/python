@@ -813,7 +813,56 @@ gluck_file = open('/Users/flaviaouyang/AutomatePython/notes/gluck.txt', 'a')
 	- then your program can restore data to variables from the hard drive
 - The `shelve` module will let you add Save and Open features to your program
 	- If you ran a program and entered some configuration settings, you could save those settings to a shelf file and have the program load them the next time it is run
-- 
+- To read and write data using `shelve` module
+	1. `import shelve`
+	2. Call `shelve.open(filename)` and store the returned shelf value in a variable
+		- You can make changes to shelf value as if it were a dictionary
+	3. When done, call `close()` on the shelf value
+- After running the program, a file called `mydata.db` will be create on the current working directory
+- Your programs can use the shelve module to reopen and retrieve the data from these shelf files
+	- they dont need to be opened in read or write mode
+		- they can do both
+
+```python
+import shelve
+shelfFile = shelve.open('mydata')
+cats = ['cool', 'grumpy', 'sad']
+shelfFile['cats'] = cats
+shelfFIle.close
+
+shelfFile = shelve.open('mydata')
+print(type(shelfFile))
+print(shelfFIle['cats'])
+shelfFile.close()
+```
+
+- Just like dictionaries, shelf values have `keys()` and `values()` methods that will return list-like values of the keys and values in the shelf.
+
+```python
+import shelve
+shelfFile = shelve.open('mydata')
+print(list(shelfFile.keys()))
+print(list(shelfFile.values()))
+shelfFile.close()
+```
+
+### Saving variables with the `pprint.pformat()` function 
+
+- `pprint.pprint()` function will pretty print the contents of a list or dictionary to the screen
+- `pprint.pformat()` fucntion will return the same text as a string instead of print it
+- `pprint.pformat()` will give you a string that you can write to `.py` file
+	- this file will then become your very own module you can import whenever you want to use the variable stored in it
+
+```python
+import pprint
+c
+cats_pp = pprint.pformat(cats)
+file_obj = open('my_cats.py', 'w')
+file_obj.write('cats = ', cats_pp, '\n')
+file_obj.close()
+```
+
+
 
 
 
