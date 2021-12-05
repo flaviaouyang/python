@@ -1,0 +1,8 @@
+Git Basics Quiz3
+
+
+Question 1: initialize a repository
+Question 2: check the status of your files
+Question 3: clone an existing repository
+Question 4: commit added files
+Question 5: add files to statging area
