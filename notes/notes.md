@@ -1,6 +1,6 @@
 # Automate the boring stuff with Python
 
-- Run python in terminal `python filename.py`
+- Run python in terminal `python3 filename.py`
 - Run python in VSC `shift + 1`
 
 ***
@@ -862,89 +862,111 @@ file_obj.write('cats = ', cats_pp, '\n')
 file_obj.close()
 ```
 
+---
 
+## Organizing Files
 
+### The `shutil` module
 
+- this module lets you copy, move, rename, and delete files in Python programs
 
+### Copy files and folder
 
+- `shutil.copy(source, destination)` will copy the file at the path source to the folder at the path destination.
 
+```python
+shutil.copy("")
+```
 
+- `shutil.copytree(source, destination)` copy an entire folder and every folder and file contained in it
 
+### Moving and renaming files and folders
 
+- `shutil.move(source, destination)` will move the file or folder at the path source to the path destination and return a string of the absolute path of the new location
 
+### Permanently Deleting Files and Folders
 
+- `os.unline(path)` will delete the file at path
+- `os.rmdir(path)` will delete the folder at path. However, folder must be empty of any files or folders
+- `shutil.rmtree(path)` will remove the folder at path, and all files and folders it contains will also be deleted.
 
+### Safe Deletes with the `send2trash` Module
 
+```python
+import send2trash
 
+nonsense_file = open("nonsense.txt", "a")
+nonsense_file.write("Pariatur aliqua id nulla eu non laborum excepteur pariatur excepteur amet.")
+nonsense_file.close()
+send2trash.send2trash("nonsense.txt")
+```
 
+### Walking a directory tree
 
+```python
+import os
 
+for folder_name, subfolders, filenames in os.walk(os.getcwd()):
+    print("Folder name is", folder_name)
+    
+    for subfolder in subfolders:
+        print("Subfolder of",folder_name, "is", subfolder)
+        
+    for filename in filenames:
+        print("Inside", folder_name, "is", filename)
+```
 
+- `os.walk()` is passed the path of a folder
 
+### Compressing files with the `zipfile` module
 
+- read zip files:
 
+	1. create a `ZipFile` object
+	2. Call `zipfile.ZipFile(filename.zip)` function
 
+	```python
+	import zipfile
+	
+	# create a ZipFile object
+	zip_file = zipfile.ZipFile("reading-zip.zip")
+	# list contents within the zip file
+	print(zip_file.namelist())
+	
+	cat_info = zip_file.getinfo("reading-zip/cat.txt")
+	print(cat_info)
+	print(cat_info.file_size)
+	print(cat_info.compress_size)
+	zip_file.close()
+	```
 
+### Extracting from zip files
 
+- `extractall()`method for `ZipFile` objects extracts all the files and folders from a ZIP file into the current working directory
+	- `extractall(folder)`: extract the content into folder
+	- `extract(filename)`: extract a single file from the ZIP file
 
+```python
+import zipfile
 
+zip_file = zipfile.ZipFile("reading-zip.zip")
+zip_file.extractall()
+zip_file.close()
+```
 
+### Creating and adding to ZIP files
 
+- Open `ZipFile` object in *write mode* by passing `'w'` as the second argument
+- `write()`:
+	1. first argument is a string of the filename to add
+	2. second argument is the compression type parameter
+- to add files, use *append mode*
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```python
+import zipfile
+
+newZip = zipfile.ZipFile('new.zip', 'w')
+newZip.write('spam.txt', compress_type=zipfile.ZIP_DEFLATED)
+newZip.close()
+```
 
