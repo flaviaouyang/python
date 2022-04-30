@@ -970,3 +970,63 @@ newZip.write('spam.txt', compress_type=zipfile.ZIP_DEFLATED)
 newZip.close()
 ```
 
+---
+
+## Debugging
+
+### Raising Exceptions
+
+- Exceptions are raised with a *raise* statement.
+	- The `raise` keyword
+	- A call to the `Exception()` function
+	- A string with a helpful error message passeed to the `Exception()` function
+
+```python
+raise Exception("This is the error message")
+
+def boxPrint(symbol, width, height):
+    if len(symbol) != 1:
+        raise Exception("Symbol must be a single character stirng")
+    if width <= 2:
+        raise Exception("Width must be greeater than 2")
+    print(symbol * width)
+```
+
+### Getting the traceback as a String
+
+```python
+import traceback
+
+try:
+    raise Exception("This is the error message")
+except:
+    errorFile = open("errorInfo.txt", "w")
+    errorFile.write(traceback.format_exc())
+    errorFile.close()
+    print("The traceback info was written to errorInfo.txt.")
+```
+
+### Assertions
+
+- An **assertion** is a sanity check to make sure your code isn't doing something wrong. This is performed by `assert`statement.
+	- The `assert` keyword
+	- a condition
+	- a comma
+	- a stirng to display when the condition is `False`
+
+```python
+def get_age(age):
+    assert age >= 18
+    return age
+
+print(get_age(5))
+
+# output
+# Traceback (most recent call last):
+#   File "/Users/flaviaouyang/Automate-Python/source-code/debug/assert.py", line 5, in <module>
+#     print(get_age(5))
+#   File "/Users/flaviaouyang/Automate-Python/source-code/debug/assert.py", line 2, in get_age
+#     assert age >= 18
+# AssertionError
+```
+
