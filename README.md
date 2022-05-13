@@ -1,4 +1,3 @@
-## Automate the boring stuff with Python
+# Python
 
-- This repository contains notes and source codes.
-
+##
