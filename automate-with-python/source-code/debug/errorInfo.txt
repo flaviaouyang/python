@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "/Users/flaviaouyang/Automate-Python/source-code/debug/get_traceback.py", line 4, in <module>
-    raise Exception("This is the error message")
-Exception: This is the error message

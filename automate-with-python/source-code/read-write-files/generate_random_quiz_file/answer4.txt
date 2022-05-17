@@ -1,8 +1,0 @@
-Answer key for quiz4
-
-
-Answer for question 1: git clone url
-Answer for question 2: git status
-Answer for question 3: git init
-Answer for question 4: git commit
-Answer for question 5: git add
