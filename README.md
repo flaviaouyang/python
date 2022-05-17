@@ -1,16 +1,22 @@
 # PYTHON
 
-## AUTOMATE THE BORING STUFF WITH PYTHON
+[Visit the website]()
 
-- Notes on Pythons basics, dictionary, regex, and more
+## CONTENTS
 
-## OBJECT-ORIENTED PROGRAMMING
+- Object-orient programming
+  - class
+  - constructor
+  - encapsulation
+  - class methods
+  - static methods
+  - inheritance
+  - [code example](./object-oriented-programming/Dog.py)
 
-- class
-- constructor 
-- encapsulation 
-- class methods
-- static methods
-- inheritance
+- Cheat sheets
+  - [pandas](./cheat-sheet/pandas.pdf)
+  - [regular expression](./cheat-sheet/regex.md)
 
-## MORE TO COME...
+## CONTRIBUTION
+
+Everyone is welcome to contribute to this project. Please open an issue or submit a pull request directly.
