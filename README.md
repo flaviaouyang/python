@@ -19,4 +19,4 @@
 
 ## CONTRIBUTION
 
-Everyone is welcome to contribute to this project. Please open an issue or submit a pull request directly.
+Anyone is welcomed to contribute to this project. Please open an issue or submit a pull request directly.
