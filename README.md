@@ -4,6 +4,10 @@
 
 ## CONTENTS
 
+- Virtual environment
+  - [anaconda basics](./virtual-environment/anaconda.md)
+  - [`conda` documentation](./virtual-environment/conda.md)
+
 - Object-orient programming
   - class
   - constructor
