@@ -4,6 +4,9 @@
 
 ## CONTENTS
 
+- basics
+  - [integer division vs float division](./misc/div.py)
+
 - Virtual environment
   - [anaconda basics](./virtual-environment/anaconda.md)
   - [`conda` documentation](./virtual-environment/conda.md)
