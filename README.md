@@ -15,6 +15,7 @@
   - [anaconda basics](./virtual-environment/anaconda.md)
   - [`conda` documentation](./virtual-environment/conda.md)
   - [`virtualenv`](./virtual-environment/virtual-env.md)
+  - [`pipenv`](./virtual-environment//pipenv-example/shell_scripts.md)
 
 - Object-orient programming
 
