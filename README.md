@@ -6,7 +6,8 @@
 
 - basics
 
-  - [integer division vs float division](./misc/div.py)
+  - [integer division vs float division](./basics/div.py)
+  - [string validation](./basics/string_validation.py)
 
 - Virtual environment
 
