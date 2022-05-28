@@ -1,6 +1,6 @@
 # PYTHON
 
-[Visit the website](https://flaviaouyang.github.io/Python/)
+[Visit the website](https://flaviaouyang.github.io/python/)
 
 ## CONTENTS
 
