@@ -8,6 +8,7 @@
 
   - [integer division vs float division](./basics/div.py)
   - [string validation](./basics/string_validation.py)
+  - [check if any/all in list are true](./basics/check_truth.py)
 
 - Virtual environment
 
