@@ -6,9 +6,10 @@
 
 - basics
 
-  - [integer division vs float division](./basics/div.py)
-  - [string validation](./basics/string_validation.py)
-  - [check if any/all in list are true](./basics/check_truth.py)
+  - [integer division vs float division](https://github.com/flaviaouyang/python/blob/master/basics/div.py)
+  - [string validation](https://github.com/flaviaouyang/python/blob/master/basics/string_validation.py)
+  - [check if any/all in list are true](https://github.com/flaviaouyang/python/blob/master/basics/check_truth.py)
+  - [`eval()` method](./basics/eval_method.py)
 
 - Virtual environment
 
