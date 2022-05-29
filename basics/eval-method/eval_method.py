@@ -1,18 +1,17 @@
-# The eval() method parses the expression passed to this method and runs python expression (code) within the program.
+output = eval("2 ** 2")
+print(output)
 
-number = 9
+# output:
+# 4
 
-# eval performs the multiplication passed as argument
-square_number = eval('number * number')
-print(square_number)
+list = [1, 2, 3]
+eval("list.extend(list)")
+print(list)
+# output:
+# [1, 2, 3, 1, 2, 3]
 
-# Output: 81
-
-# syntax
-# eval(expression, globals=None, locals=None)
-
-# expression - the string parsed and evaluated as a Python expression
-# globals (optional) - a dictionary
-# locals (optional)- a mapping object. Dictionary is the standard and commonly used mapping type in Python.
-
-# The eval() method returns the result evaluated from the expression.
+from math import *
+a = 169
+print(eval('sqrt(a)', {'__builtins__': None}, {'a': a, 'sqrt': sqrt}))
+# output:
+# 13.0
