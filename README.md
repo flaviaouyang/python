@@ -9,7 +9,7 @@
   - [integer division vs float division](https://github.com/flaviaouyang/python/blob/master/basics/div.py)
   - [string validation](https://github.com/flaviaouyang/python/blob/master/basics/string_validation.py)
   - [check if any/all in list are true](https://github.com/flaviaouyang/python/blob/master/basics/check_truth.py)
-  - [`eval()` method](https://github.com/flaviaouyang/python/blob/master/basics/eval_method.py)
+  - [`eval()` method](./basics/eval-method/eval.md)
 
 - Virtual environment
 
