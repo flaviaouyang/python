@@ -62,3 +62,7 @@ print(eval('sqrt(a)', {'__builtins__': None}, {'a': a, 'sqrt': sqrt}))
 ```
 
 - Restricting the use of `eval()` by passing globals and locals dictionaries will make your code secure particularly when you are using input provided by the user to the `eval()` method.
+
+## Example
+
+[Visit code examples](https://github.com/flaviaouyang/python/blob/master/basics/eval-method/eval_method.py)
