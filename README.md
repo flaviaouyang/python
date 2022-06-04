@@ -7,9 +7,7 @@
 - basics
 
   - [integer division vs float division](https://github.com/flaviaouyang/python/blob/master/basics/div.py)
-  - [string](./basics//string)
-    - [string validation](https://github.com/flaviaouyang/python/blob/master/basics/string/string_validation.py)
-    - [string manipulation](https://github.com/flaviaouyang/python/blob/master/basics/string/string_manipulation.py)
+  - [string validation](https://github.com/flaviaouyang/python/blob/master/basics/string/string_validation.py)
   - [check if any/all in list are true](https://github.com/flaviaouyang/python/blob/master/basics/check_truth.py)
   - [`eval()` method](./basics/eval-method/eval.md)
   - [data structure](./basics/data-structure/comparison.md)
