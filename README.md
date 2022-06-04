@@ -16,6 +16,7 @@
     - [tuples](https://github.com/flaviaouyang/python/blob/master/basics/data-structure/tuples.py)
     - [dictionary](https://github.com/flaviaouyang/python/blob/master/basics/data-structure/dictionary.py)
     - [set](https://github.com/flaviaouyang/python/blob/master/basics/data-structure/set.py)
+  - [importing modules](./basics/import_module/)
 
 - Virtual environment
 
