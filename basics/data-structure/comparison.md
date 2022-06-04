@@ -1,4 +1,4 @@
-# List V.S. Tuples V.S. Sets
+# List vs Tuples vs Sets vs Dictionary
 
 ## Overview
 
