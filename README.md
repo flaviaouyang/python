@@ -7,13 +7,15 @@
 - basics
 
   - [integer division vs float division](https://github.com/flaviaouyang/python/blob/master/basics/div.py)
-  - [string validation](https://github.com/flaviaouyang/python/blob/master/basics/string_validation.py)
+  - [string](./basics//string)
+    - [string validation](https://github.com/flaviaouyang/python/blob/master/basics/string/string_validation.py)
+    - [string manipulation](https://github.com/flaviaouyang/python/blob/master/basics/string/string_manipulation.py)
   - [check if any/all in list are true](https://github.com/flaviaouyang/python/blob/master/basics/check_truth.py)
   - [`eval()` method](./basics/eval-method/eval.md)
-  - [data structure](./basics/data-structure/)
-    - [list](./basics/data-structure/list.py)
-    - [tuples](./basics/data-structure/tuples.py)
-    - dictionary
+  - [data structure](./basics/data-structure/comparison.md)
+    - [list](https://github.com/flaviaouyang/python/blob/master/basics/data-structure/list.py)
+    - [tuples](https://github.com/flaviaouyang/python/blob/master/basics/data-structure/tuples.py)
+    - [dictionary](https://github.com/flaviaouyang/python/blob/master/basics/data-structure/dictionary.py)
 
 - Virtual environment
 
