@@ -10,10 +10,12 @@
   - [string validation](https://github.com/flaviaouyang/python/blob/master/basics/string/string_validation.py)
   - [check if any/all in list are true](https://github.com/flaviaouyang/python/blob/master/basics/check_truth.py)
   - [`eval()` method](./basics/eval-method/eval.md)
+  - [`enumerate` in for loops](https://github.com/flaviaouyang/python/blob/master/basics/enumerate_function.py)
   - [data structure](./basics/data-structure/comparison.md)
     - [list](https://github.com/flaviaouyang/python/blob/master/basics/data-structure/list.py)
     - [tuples](https://github.com/flaviaouyang/python/blob/master/basics/data-structure/tuples.py)
     - [dictionary](https://github.com/flaviaouyang/python/blob/master/basics/data-structure/dictionary.py)
+    - [set](https://github.com/flaviaouyang/python/blob/master/basics/data-structure/set.py)
 
 - Virtual environment
 
