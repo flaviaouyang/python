@@ -13,6 +13,7 @@
   - [`enumerate` in for loops](https://github.com/flaviaouyang/python/blob/master/basics/enumerate_function.py)
   - [data structure](./basics/data-structure/comparison.md)
   - [importing modules](./basics/import-module/)
+  - [testing and debugging](./basics/test-debug.md)
 
 - Virtual environment
 
