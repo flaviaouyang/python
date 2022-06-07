@@ -27,8 +27,8 @@
 
 - modules
 
-  - [os module](./os-module/)
-  - [file](./modules/file/)
+  - [os module](https://github.com/flaviaouyang/python/blob/master/modules/os/basics.py)
+  - [file](https://github.com/flaviaouyang/python/blob/master/modules/file/basics.py)
 
 - Object-orient programming
 
