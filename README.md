@@ -16,6 +16,7 @@
   - [testing and debugging](./basics/test-debug.md)
   - [date and time](./basics/date-time.md)
   - [function](./basics/function.md)
+  - [input](./basics/input.md)
 
 - Virtual environment
 
