@@ -14,6 +14,7 @@
   - [data structure](./basics/data-structure/comparison.md)
   - [importing modules](./basics/import-module/)
   - [testing and debugging](./basics/test-debug.md)
+  - [date and time](./basics/date-time.md)
 
 - Virtual environment
 
