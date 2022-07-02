@@ -15,6 +15,7 @@
   - [importing modules](./basics/import-module/)
   - [testing and debugging](./basics/test-debug.md)
   - [date and time](./basics/date-time.md)
+  - [function](./basics/function.md)
 
 - Virtual environment
 
