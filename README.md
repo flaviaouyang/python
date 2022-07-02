@@ -4,7 +4,7 @@
 
 ## CONTENTS
 
-- basics
+- Basics
 
   - [integer division vs float division](https://github.com/flaviaouyang/python/blob/master/basics/div.py)
   - [string validation](https://github.com/flaviaouyang/python/blob/master/basics/string_validation.py)
@@ -26,12 +26,12 @@
     - [Pipfile](./virtual-environment/pipenv-example/Pipfile)
   - [`virtualenvwrapper`](./virtual-environment/virtualenvwrapper.md)
 
-- modules
+- Modules
 
   - [os module](https://github.com/flaviaouyang/python/blob/master/modules/os/basics.py)
   - [file](https://github.com/flaviaouyang/python/blob/master/modules/file/basics.py)
 
-- Object-orient programming
+- Object-oriented programming
 
   - class
   - constructor
