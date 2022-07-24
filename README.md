@@ -31,7 +31,7 @@
 - Modules
 
   - [os module](https://github.com/flaviaouyang/python/blob/master/modules/os/basics.py)
-  - [file](https://github.com/flaviaouyang/python/blob/master/modules/file/basics.py)
+  - [file](./modules/file/file.md)
 
 - Object-oriented programming
 
