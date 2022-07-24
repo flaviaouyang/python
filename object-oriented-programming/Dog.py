@@ -1,5 +1,5 @@
 # object
-class Dog:
+class dog:
     # attributes
     
     # private double underscore
@@ -22,10 +22,10 @@ class Dog:
         self.name = name
 
     def __add__(self, other):
-        return Dog("Hybrid DOG", self.age + other.age)
+        return dog("Hybrid DOG", self.age + other.age)
 
     def __sub__(self, other):
-        return Dog("Hybrid DOG", self.age - other.age)
+        return dog("Hybrid DOG", self.age - other.age)
 
     def __str__(self):
         return f"A dog named {self.name} and age {self.age}"
@@ -66,7 +66,7 @@ class Dog:
 
 # inheritance
 # object Cat inherits from Dog
-class Cat(Dog):
+class Cat(dog):
     def __init__(self, name, age, color):
         super().__init__(name, age)
         self.color = color
@@ -76,12 +76,12 @@ class Cat(Dog):
         print("Meow...")
 
 
-archie = Dog("Archie", 10)
-ollie = Dog("Ollie", 1)
+archie = dog("Archie", 10)
+ollie = dog("Ollie", 1)
 
-print(Dog.num_dogs())
-print(Dog.get_all_dogs())
-for dog in Dog._Dog__dogs:
+print(dog.num_dogs())
+print(dog.get_all_dogs())
+for dog in dog._dog__dogs:
     print(dog)
     
-# print(Dog._Dog__dogs)
+# print(dog._dog__dogs)
